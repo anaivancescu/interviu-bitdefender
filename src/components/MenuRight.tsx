@@ -1,11 +1,10 @@
 import * as React from "react";
-import {Sidebar} from "primereact/sidebar";
 import { ListBox } from 'primereact/listbox';
 import {useState} from "react";
 
 
-const MenuRight = ({isVisible}) => {
-    const [selectedItem, setSelectedItem] = useState(null);
+const MenuRight = () => {
+    const [selectedValue, setSelectedValue] = useState(null);
 
     const item = [
         {
@@ -39,21 +38,16 @@ const MenuRight = ({isVisible}) => {
             name: "Sandbox Analyzer",
             icon: "acascascacas"
         }
-    ]
+    ];
+
     return (
-        <div className={"Customized-header-container"}>
-            <Sidebar visible={isVisible}  position="left" onHide={() => setVisible(false)}>
-                <div>
-
-                    <ListBox
-                        value={selectedItem}
-                        style={{ width: '15rem' }}
-                        listStyle={{ height: '250px' }}
-                        options={item}
-                        onChange={(e) => setSelectedItem(e.value)} />
-
-                </div>
-            </Sidebar>
+        <div>
+            <ListBox
+                value={selectedValue}
+                options={item}
+                onChange={(e) => setSelectedValue(e.value)}
+                optionLabel="name"
+                style={{ width: '15rem' }} />
         </div>
     )
 }

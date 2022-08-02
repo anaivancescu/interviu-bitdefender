@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  height: 80vw;
 }
 
 .App-logo {
@@ -12,9 +13,63 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.Customized-header-container{
+  height: 56px;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  top: 0;
+  flex-direction: row-reverse;
+}
+.icons{
+  margin-top: 10px;
+  margin-right:  20px;
+  margin-left: 20px;
+}
+.field-radiobutton{
+  margin-top: 24px;
+}
+.page-title{
+  margin-top:100px;
+  margin-left:130px;
+}
+.footer-modal{
+  width: 55vw;
+  display: flex;
+  justify-content : start;
+  margin-top: 10px;
+  border-top: 1px solid #6F6F6F;
+  padding-top: 20px;
+}
+.toast-demo button {
+  min-width: 10rem;
+  margin-right: .5rem;
+}
 
+@media screen and (max-width: 960px) {
+  .toast-demo button {
+    width: 100%;
+    margin-bottom: .5rem;
+  }
+}
+.text-form{
+  margin-top: 12px;
+  margin-left: 20px;
+}
+.text-form-normal{
+  margin-top: 12px;
+}
+.drop-down{
+  margin-top: 5px;
+}
+.form-fields{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
 .App-header {
-  background-color: #282c34;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
